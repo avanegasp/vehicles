@@ -1,0 +1,13 @@
+<H1>To create a new Car</H1>
+
+<%= form_tag ("/index"), method: "post" do %>
+
+  <%= text_field :vehicle, :make_and_model, value: 'Model'%>
+  <%= date_field :vehicle, :year, value: 'Year'%>
+  <%= text_field :vehicle, :automatic, value: 'Automatic'%>
+  <%= number_field :vehicle, :door, value: 'Door'%>
+  <%= text_field :vehicle, :color, value: 'Color'%>
+
+  <%= submit_tag("Create Vehicle") %>
+
+<% end %>

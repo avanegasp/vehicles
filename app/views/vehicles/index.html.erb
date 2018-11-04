@@ -1,0 +1,14 @@
+
+<h1>Estos son mis Carros</h1>
+
+<ul>
+  <%@vehicles.each do |vehicle| %>
+    <li>
+      <p>Model:  <%= vehicle.make_and_model%> </p>
+      <p>Year : <%= vehicle.year%> </p>
+      <p>Color:<%= vehicle.color%> </p>
+      <p>Door : <%= vehicle.door%> </p>
+      <p>Automatic: <%= vehicle.automatic%> </p>
+    </li>
+  <% end %>
+</ul>
