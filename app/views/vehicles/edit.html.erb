@@ -1,6 +1,7 @@
-<H1>To create a new Car</H1>
+<h1>estoy en el edit</h1>
 
-<%= form_tag ("/vehicles"), method: "post" do %>
+
+<%= form_tag "/vehicles/#{@vehicle.id}", method: "patch" do %>
 
   <%= text_field :vehicle, :driver, value: 'Driver'%>
   <%= text_field :vehicle, :make_and_model, value: 'Model'%>
@@ -9,9 +10,6 @@
   <%= number_field :vehicle, :door_count, value: 'Door'%>
   <%= text_field :vehicle, :color, value: 'Color'%>
 
-  <%= submit_tag("Create Vehicle") %>
-  <%= button_to "Home", "/", :method => :get %>
-  <%= button_to "Index", "/vehicles", :method => :get %>
-
+  <%= submit_tag("Edit Vehicle") %>
 
 <% end %>

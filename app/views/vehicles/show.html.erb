@@ -1,0 +1,16 @@
+
+<h1>Llegaste al show</h1>
+
+<ul>
+  <li>
+    <%= @vehicle.driver %>
+    <%= @vehicle.make_and_model %>
+    <%= @vehicle.year %>
+    <%= @vehicle.color %>
+    <%= @vehicle.door_count %>
+    <%= @vehicle.transmission %>
+  </li>
+</ul>
+
+<%= button_to "Home", "/", :method => :get %>
+<%= button_to "Index", "/vehicles", :method => :get %>

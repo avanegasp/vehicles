@@ -4,11 +4,15 @@
 <ul>
   <%@vehicles.each do |vehicle| %>
     <li>
+      <%= link_to vehicle.make_and_model, "/vehicles/#{vehicle.id}" %>
+      <p>Driver:  <%= vehicle.driver%> </p>
       <p>Model:  <%= vehicle.make_and_model%> </p>
       <p>Year : <%= vehicle.year%> </p>
       <p>Color:<%= vehicle.color%> </p>
-      <p>Door : <%= vehicle.door%> </p>
-      <p>Automatic: <%= vehicle.automatic%> </p>
+      <p>Door : <%= vehicle.door_count%> </p>
+      <p>Automatic: <%= vehicle.transmission%> </p>
     </li>
-  <% end %>
+    <%= button_to "delete", "/vehicles/#{vehicle.id}", :method => :delete, confirm: "Do you wanna delete?" %>
+    <%= button_to "Home", "/", :method => :get %>
+<% end %>
 </ul>

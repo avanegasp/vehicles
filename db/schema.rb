@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 20181104022527) do
 
   create_table "vehicles", force: :cascade do |t|
+    t.string "driver"
     t.string "make_and_model"
     t.date "year"
-    t.boolean "automatic"
-    t.integer "door"
+    t.string "transmission"
+    t.integer "door_count"
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
